@@ -1,0 +1,1 @@
+<?php return [host = WEBGIS_DB_HOST ?: "localhost","port" = WEBGIS_DB_PORT ?: "5432","database" = WEBGIS_DB_NAME ?: "Baitap_21092026","username" = WEBGIS_DB_USER ?: "postgres","password" = WEBGIS_DB_PASSWORD ?: 1234 ]

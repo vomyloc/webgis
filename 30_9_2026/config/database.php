@@ -1,0 +1,1 @@
+<?php return ["host" => getenv("WEBGIS_DB_HOST") ?: "localhost", "port" => getenv("WEBGIS_DB_PORT") ?: "5432", "database" => getenv("WEBGIS_DB_NAME") ?: "Baitap_21092026", "username" => getenv("WEBGIS_DB_USER") ?: "postgres", "password" => getenv("WEBGIS_DB_PASSWORD") ?: "1234"];

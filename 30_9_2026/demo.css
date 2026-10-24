@@ -1,0 +1,308 @@
+:root {
+    --topbar-height: 54px;
+    --sidebar-width: 390px;
+    --primary-color: #0f4c81;
+    --bg-soft: #f4f6f9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-soft);
+    overflow: hidden;
+}
+
+.login-bg {
+    background: linear-gradient(135deg, #0b2545 0%, #134074 50%, #1d63b8 100%);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    border-radius: 16px;
+}
+
+.icon-badge {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background: rgba(13, 110, 253, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-topbar {
+    height: var(--topbar-height);
+    background: linear-gradient(90deg, #0b2545 0%, #134074 100%);
+    z-index: 1030;
+}
+
+.workspace-container {
+    display: flex;
+    height: calc(100vh - var(--topbar-height));
+    width: 100vw;
+    position: relative;
+}
+
+.sidebar-panel {
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    height: 100%;
+    background: #f8fafc;
+    border-right: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    z-index: 1010;
+    transition: transform 0.25s ease-in-out;
+}
+
+.sidebar-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.custom-tabs {
+    background: #eef2f6;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.custom-tabs .nav-link {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #475569;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+.custom-tabs .nav-link.active {
+    background-color: #ffffff;
+    color: #0d6efd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.detail-card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.detail-group-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #0f4c81;
+    background: #e8f1f8;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.section-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f4c81;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 4px;
+}
+
+.map-wrapper {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+.button-locate {
+    background: #fff;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Giao diện trang quản lý tài khoản dành cho quản trị viên. */
+html.accounts-document,
+body.accounts-page {
+    min-height: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body.accounts-page {
+    background: #f4f6fa;
+}
+
+.accounts-page .bg-topbar {
+    min-height: var(--topbar-height);
+    height: auto;
+}
+
+.accounts-container {
+    max-width: 1540px;
+    margin: 0 auto;
+}
+
+.accounts-eyebrow {
+    color: #2674b8;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+}
+
+.account-stat-card,
+.account-list-card {
+    border-radius: 14px;
+}
+
+.account-stat-icon {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    font-size: 1.35rem;
+}
+
+.stat-total { background: #e8f1ff; color: #2563eb; }
+.stat-admin { background: #fff0ec; color: #dc4c36; }
+.stat-user { background: #e9f8f0; color: #218553; }
+
+.account-search {
+    width: min(100%, 440px);
+}
+
+.account-search .input-group-text,
+.account-search .form-control,
+.account-search .btn {
+    min-height: 42px;
+}
+
+.account-table {
+    min-width: 800px;
+}
+
+.account-table thead th {
+    padding: 0.8rem 1rem;
+    background: #f7f9fc;
+    color: #64748b;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.account-table tbody td {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+}
+
+.account-table tbody tr:hover {
+    background: #f9fbff;
+}
+
+.account-avatar {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 38px;
+    border-radius: 50%;
+    background: #e8f1ff;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.account-avatar.avatar-admin {
+    background: #fff0ec;
+    color: #d74732;
+}
+
+.role-admin {
+    background: #fff0ec;
+    color: #c43e2c;
+    border: 1px solid #ffd5cb;
+}
+
+.role-user {
+    background: #eaf7ef;
+    color: #227447;
+    border: 1px solid #c9edd6;
+}
+
+.account-action {
+    width: 34px;
+    height: 34px;
+    display: inline-grid;
+    place-items: center;
+}
+
+.empty-accounts-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: 1.35rem;
+}
+
+@media (max-width: 575.98px) {
+    .accounts-container {
+        padding-top: 1.5rem !important;
+    }
+
+    .account-stat-card .card-body {
+        padding: 0.9rem;
+        gap: 0.65rem !important;
+    }
+
+    .account-stat-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sidebar-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        width: 340px;
+        min-width: 340px;
+    }
+    .sidebar-panel.show-mobile {
+        transform: translateX(0);
+    }
+}
+
+/* Trang đăng ký có nhiều trường hơn trang đăng nhập nên cần cuộn trên màn hình thấp. */
+html.register-document,
+body.register-page {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

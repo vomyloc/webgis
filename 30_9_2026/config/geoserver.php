@@ -1,0 +1,1 @@
+<?php return ["url" => rtrim(getenv("WEBGIS_GEOSERVER_URL") ?: "http://localhost:8181/geoserver", "/"), "workspace" => getenv("WEBGIS_GEOSERVER_WORKSPACE") ?: "dong_thanh", "layer" => getenv("WEBGIS_GEOSERVER_LAYER") ?: "thua_dat_dong_thanh", "wms_version" => "1.3.0", "format" => "image/png", "transparent" => true, "styles" => "", "srs" => "EPSG:4326"];
